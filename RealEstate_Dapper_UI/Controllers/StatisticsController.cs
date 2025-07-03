@@ -38,7 +38,7 @@ namespace RealEstate_Dapper_UI.Controllers
             var client4 = _httpClientFactory.CreateClient();
             var responseMessage4 = await client4.GetAsync("https://localhost:44358/api/Statistics/AverageProductPriceByRent");
             var jsonData4 = await responseMessage4.Content.ReadAsStringAsync();
-            ViewBag.averageProductPriceByRent = jsonData4;
+            ViewBag.averageProductPriceByRent = Convert.ToDecimal(jsonData4);
             #endregion
 
             #region İstatistik5
