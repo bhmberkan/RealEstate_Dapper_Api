@@ -10,6 +10,7 @@
         public string District { get; set; }
       
         public int ProductCategory { get; set; }
-       
+        public bool DealOfTheDay { get; set; }
+
     }
 }
