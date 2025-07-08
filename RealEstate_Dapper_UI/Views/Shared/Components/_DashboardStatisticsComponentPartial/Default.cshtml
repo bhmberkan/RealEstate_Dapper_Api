@@ -1,0 +1,46 @@
+﻿@using System.Globalization
+
+
+
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-address-book fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Toplam İlan Sayısı</p>
+                    <h6 class="mb-0">@ViewBag.productCount</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-briefcase fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">En iyi Personel</p>
+                    <h6 class="mb-0">@ViewBag.employeeNameByMaxProductCount</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-building fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Şehir Sayısı</p>
+                    <h6 class="mb-0">@ViewBag.differentCityCount</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-rocket fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">Ortalama Kira ₺</p>
+                    <h6 class="mb-0">@((Convert.ToDecimal(ViewBag.averageProductPriceByRent) / 1000).ToString("C0", new CultureInfo("tr-TR")))</h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
