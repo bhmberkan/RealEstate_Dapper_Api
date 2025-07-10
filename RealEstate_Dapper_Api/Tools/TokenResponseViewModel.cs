@@ -5,10 +5,10 @@
         public TokenResponseViewModel(string token, DateTime exprieDate)
         {
             Token = token;
-            ExprieDate = exprieDate;
+            ExpireDate = exprieDate;
         }
 
         public string Token { get; set; }
-        public DateTime ExprieDate { get; set; }
+        public DateTime ExpireDate { get; set; }
     }
 }
