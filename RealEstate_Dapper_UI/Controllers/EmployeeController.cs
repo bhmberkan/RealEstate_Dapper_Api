@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.EmployeeDtos;
 using RealEstate_Dapper_UI.Services;
+using System.Security.Claims;
 using System.Text;
 
 namespace RealEstate_Dapper_UI.Controllers
@@ -21,6 +22,7 @@ namespace RealEstate_Dapper_UI.Controllers
 
         public async Task<IActionResult> Index()
         {
+           
             var user = User.Claims;
             var userId = _loginService.GetUserId;
 
