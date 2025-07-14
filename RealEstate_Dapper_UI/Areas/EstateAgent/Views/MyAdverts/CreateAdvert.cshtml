@@ -1,9 +1,10 @@
 ﻿@model CreateProductDto
-
 @{
-    ViewData["Title"] = "CreateProduct";
-    Layout = "~/Views/Admin/Index.cshtml";
+    ViewData["Title"] = "CreateAdvert";
+    Layout = "~/Areas/EstateAgent/Views/LayoutEstateAgent/Index.cshtml";
 }
+
+
 
 
 
@@ -21,35 +22,39 @@
 
                     <label>Şehir</label>
                     <br />
-                    <input type="text" asp-for="Title" class="form-control">
+                    <input type="text" asp-for="City" class="form-control">
                     <br />
 
                     <label>İlçe</label>
                     <br />
-                    <input type="text" asp-for="Title" class="form-control">
+                    <input type="text" asp-for="District" class="form-control">
                     <br />
 
                     <label>Kategori</label>
                     <br />
-                    @Html.DropDownListFor(x => x.ProductCategory, (List<SelectListItem>)ViewBag.CategoryValues,new{@class="form-control"})
+                    @Html.DropDownListFor(x => x.ProductCategory, (List<SelectListItem>)ViewBag.CategoryValues, new { @class = "form-control" })
                     <br />
 
                     <label>Fiyat</label>
                     <br />
-                    <input type="text" asp-for="Title" class="form-control">
+                    <input type="text" asp-for="Price" class="form-control">
                     <br />
 
                     <label>Tür</label>
                     <br />
-                    <input type="text" asp-for="Title" class="form-control">
+                    <input type="text" asp-for="Type" class="form-control">
                     <br />
 
                     <label>Kapak Fotografı</label>
                     <br />
-                    <input type="text" asp-for="Title" class="form-control">
+                    <input type="text" asp-for="CoverImage" class="form-control">
                     <br />
 
 
+                    <label>İlan Açıklaması</label>
+                    <br />
+                    <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                    <br />
                     <label>İlan Açık Adresi</label>
                     <br />
                     <textarea asp-for="Address" class="form-control" rows="5"></textarea>
@@ -63,4 +68,6 @@
         </div>
     </div>
 </div>
+
+
 

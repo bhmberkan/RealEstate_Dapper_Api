@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using RealEstate_Dapper_Api.Dtos.CategoryDtos;
+using RealEstate_Dapper_Api.Dtos.ProductDetailDtos;
 using RealEstate_Dapper_Api.Dtos.ProductDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
 
@@ -12,6 +13,29 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
         public ProductRepository(Context context)
         {
             _context = context;
+        }
+
+        public async Task CreateProduct(CreateProductDto createProductDto)
+        {
+            string query = "insert into Product (Title,Price,City,District,CoverImage,Address,Description,Type,DealOfTheDay,AdvertisementDate,ProductStatus,ProductCategory,EmployeeID) values (@Title,@Price,@City,@District,@CoverImage,@Address,@Description,@Type,@DealOfTheDay,@AdvertisementDate,@ProductStatus,@ProductCategory,@EmployeeID)";
+            var paramaters = new DynamicParameters();
+            paramaters.Add("@Title", createProductDto.Title);
+            paramaters.Add("@Price", createProductDto.Price);
+            paramaters.Add("@City", createProductDto.City);
+            paramaters.Add("@District", createProductDto.District);
+            paramaters.Add("@CoverImage", createProductDto.CoverImage);
+            paramaters.Add("@Address", createProductDto.Address);
+            paramaters.Add("@Description", createProductDto.Description);
+            paramaters.Add("@Type", createProductDto.Type);
+            paramaters.Add("@DealOfTheDay", createProductDto.DealOfTheDay);
+            paramaters.Add("@AdvertisementDate", createProductDto.AdvertisementDate);
+            paramaters.Add("@ProductStatus", createProductDto.ProductStatus);
+            paramaters.Add("@ProductCategory", createProductDto.ProductCategory);
+            paramaters.Add("@EmployeeID", createProductDto.EmployeeID);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, paramaters);
+            }
         }
 
         public async  Task<List<ResultProductDto>> GetAllProductAsync()
@@ -82,7 +106,32 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
             }
         }
 
-        public async void ProductDealOfTheDayStatusChangeToFalse(int id)
+        public async Task<GetProductByProductIdDto> GetProductByProductId(int id)
+        {
+            string query = "Select ProductID,Title,Price,City,District,Description,CategoryName,CoverImage,Type,Address,DealOfTheDay,AdvertisementDate From Product inner join Category on Product.ProductCategory=Category.CategoryID Where ProductId=@productıd ";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productID", id);
+
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryAsync<GetProductByProductIdDto>(query, parameters);
+                return values.FirstOrDefault();
+            }
+        }
+
+        public async Task<GetProductDetailByIdDto> GetProductDetailByProductId(int id)
+        {
+            string query = "Select * From ProductDetails Where ProductId=@productId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productID", id);
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryAsync<GetProductDetailByIdDto>(query, parameters);
+                return values.FirstOrDefault();
+            }
+        }
+
+        public async Task ProductDealOfTheDayStatusChangeToFalse(int id)
         {
             string query = "Update Product Set DealOfTheDay=0 Where ProductID=@productID";
             var parameters = new DynamicParameters();
@@ -94,7 +143,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
             }
         }
 
-        public async void ProductDealOfTheDayStatusChangeToTrue(int id)
+        public async Task ProductDealOfTheDayStatusChangeToTrue(int id)
         {
             string query = "Update Product Set DealOfTheDay=1 Where ProductID=@productID";
             var parameters = new DynamicParameters();

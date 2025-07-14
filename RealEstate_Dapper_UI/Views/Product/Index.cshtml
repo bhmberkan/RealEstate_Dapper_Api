@@ -41,12 +41,12 @@
                                     <td>@item.district</td>
                                     <td>@item.categoryName</td>
                                     <td>@item.price</td>
-                                    <td>@item.Type</td>
+                                    <td>@item.type</td>
                                     <td><a href="/Product/DeleteProduct/@item.productId" class="btn btn-outline-danger">Sil</a></td>
                                     <td><a href="/Product/UpdateProduct/@item.productId" class="btn btn-outline-success">Güncelle</a></td>
                                     <td><a href="/Product/ProductDetail/@item.productId" class="btn btn-outline-primary">Sitede Gör</a></td>
                                     <td>
-                                        @if(item.DealOfTheDay==true)
+                                        @if(item.dealOfTheDay==true)
                                         {
                                             <a href="/Product/ProductDealOfTheDayStatusChangeToFalse/@item.productId" class="btn btn-outline-secondary">Pasif Yap</a>
                                         }
