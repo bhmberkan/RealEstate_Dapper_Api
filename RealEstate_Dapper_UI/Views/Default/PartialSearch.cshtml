@@ -1,6 +1,4 @@
-﻿@model List<ResultCategoryDto>
-
-<section class="w3l-cover-3">
+﻿<section class="w3l-cover-3">
     <div class="cover top-bottom">
         <div class="container">
             <div class="middle-section text-center">
@@ -15,18 +13,22 @@
                             <li><a href="#link">Yazlık</a></li>
                         </ul>
                     </div>
-                    <form action="#" class="w3l-cover-3-gd" method="GET">
-                        <input type="search" name="text" placeholder="Enter keywords" required>
+                    <form asp-action="PartialSearch" asp-controller="Default" class="w3l-cover-3-gd" method="post">
+                        <input type="search" name="p" placeholder="Anahtar Kelime" required>
                         <span class="input-group-btn">
                             <select class="btn btn-default" name="ext" required>
-                                @foreach (var item in Model)
-                                {
-                                    <option value="@item.CategoryId">@item.CategoryName</option>
-                                }
+                                <option selected="">Gayrimenkul türü</option>
+                                <option>Villa</option>
+                                <option>Apartment</option>
+                                <option>Private house</option>
+                                <option>Building</option>
+                                <option>Shop</option>
+                                <option>Social housing</option>
+                                <option>Town house</option>
                             </select>
                         </span>
                         <span class="input-group-btn">
-                            <select class="btn btn-default" name="ext" required>
+                            <select class="btn btn-default" name="y" required>
                                 <option selected="">Şehir Seçiniz</option>
                                 <option>İstanbul</option>
                                 <option>Paris</option>

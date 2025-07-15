@@ -1,4 +1,12 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ResultPropertyAmenityByStatusTrueDto>
+
+
+<div class="single-bg-white">
+    <h3 class="post-content-title mb-4">Evin Diğer Özellikleri</h3>
+    <ul class="details-list">
+        @foreach (var item in Model)
+        {
+            <li><strong>@item.Title </strong></li>
+        }
+    </ul>
+</div>
