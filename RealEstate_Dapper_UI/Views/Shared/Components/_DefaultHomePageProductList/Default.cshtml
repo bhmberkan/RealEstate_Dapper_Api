@@ -8,7 +8,8 @@
             </div>
 
             <div class="row pt-md-5 pt-4">
-               @foreach (var x in Model.Take(6))
+                @*  @foreach (var x in Model.Take(6)) *@
+                @foreach (var x in Model.Where(x => x.dealOfTheDay == true))
                 {
                     <div class="col-lg-4 col-md-6 mb-3">
                         <a href="property-single.html">
@@ -22,11 +23,11 @@
                             </div>
                         </a>
                     </div>
-                    <br/>
+                    <br />
                 }
-               
-              
+
+
             </div>
         </div>
-    </div>  
+    </div>
 </section>
