@@ -1,10 +1,66 @@
-﻿
+﻿@model List<ResultCategoryDto>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
 
-@await Html.PartialAsync("~/Views/Default/PartialSearch.cshtml")
+
+
+<section class="w3l-cover-3">
+	<div class="cover top-bottom">
+		<div class="container">
+			<div class="middle-section text-center">
+				<div class="section-width">
+					<p>Hayalinizdeki Eve Sahip Olun!</p>
+					<h2>Bugün Sizin İçin Doğru Evi Bulalım</h2>
+					<div class="most-searches">
+						<h4>Sık Arananlar</h4>
+						<ul>
+							<li><a href="#link">Villa</a></li>
+							<li><a href="#link">Daire</a></li>
+							<li><a href="#link">Yazlık</a></li>
+						</ul>
+					</div>
+					<form asp-action="PartialSearch" asp-controller="Default" class="w3l-cover-3-gd" method="post">
+						<input type="search" name="searchKeyValue" placeholder="Anahtar kelimeyi girin" required>
+						<span class="input-group-btn">
+							<select class="btn btn-default" name="propertyCategoryId" required>
+								<option selected="">Gayrimenkul Türü</option>
+								@foreach (var item in Model)
+								{
+									<option value="@item.CategoryId">@item.CategoryName</option>
+								}
+							</select>
+						</span>
+						<span class="input-group-btn">
+							<select class="btn btn-default" name="city" required>
+								<option selected="">Şehir Seçiniz</option>
+								<option>İstanbul</option>
+								<option>Paris</option>
+								<option>Milano</option>
+								<option>Roma</option>
+								<option>Lyon</option>
+								<option>Münih</option>
+								<option>Berlin</option>
+								<option>Sofya</option>
+								<option>İzmir</option>
+								<option>Balıkesir</option>
+							</select>
+						</span>
+						<button type="submit" class="btn-primary">Ara</button>
+					</form>
+				</div>
+				<section id="bottom" class="demo">
+					<a href="#bottom"><span></span>İlan Listesi</a>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+@* @await Html.PartialAsync("~/Views/Default/PartialSearch.cshtml") *@
 @* @await Component.InvokeAsync("_DefaultFeatureComponentPartial") *@
 @await Component.InvokeAsync("_DefaultHomePageProductList")
 @await Component.InvokeAsync("_DefaultWhoWeAreComponentPartial")
