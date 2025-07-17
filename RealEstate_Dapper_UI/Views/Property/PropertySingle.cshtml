@@ -80,7 +80,7 @@
                             </ul>
                         </div>
 
-                         @await Component.InvokeAsync("_PropertyAmenityStatusTrueByPropertyIdComponentPartial") 
+                        @await Component.InvokeAsync("_PropertyAmenityStatusTrueByPropertyIdComponentPartial", new { id = ViewBag.i })
 
                     </div>
 
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-             @await Component.InvokeAsync("_PropertyAppUserComponentPartial") 
+            @await Component.InvokeAsync("_PropertyAppUserComponentPartial", new { id = ViewBag.i })
 
         </div>
     </div>
