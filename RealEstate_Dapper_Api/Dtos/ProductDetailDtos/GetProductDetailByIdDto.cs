@@ -3,7 +3,7 @@
     public class GetProductDetailByIdDto
     {
 
-        public int productDetailId { get; set; }
+      public int productDetailsId { get; set; }
         public int bedRoomCount { get; set; }
         public int productSize { get; set; }
         public int bathCount { get; set; }

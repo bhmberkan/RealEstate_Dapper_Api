@@ -47,10 +47,10 @@ namespace RealEstate_Dapper_UI.Controllers
 
 
 
-        [HttpGet]
-        public async Task<IActionResult> PropertySingle(int id)
+        [HttpGet("Property/{slug}/{id}")]
+        public async Task<IActionResult> PropertySingle(string slug,int id)
         {
-            id = 1;
+          
             ViewBag.i = id;
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:44358/api/Products/GetProductByProductId?id=" + id);
@@ -90,11 +90,22 @@ namespace RealEstate_Dapper_UI.Controllers
 
             ViewBag.datediff = month / 30;
 
-          //  string slugFromTitle = CreateSlug(values.title);
-            //ViewBag.slugUrl = slugFromTitle;
+            string slugFromTitle = CreateSlug(values.title);
+            ViewBag.slugUrl = slugFromTitle;
 
             return View();
 
+        }
+
+        private string CreateSlug(string title)
+        {
+            title = title.ToLowerInvariant(); // Küçük harfe çevir
+            title = title.Replace(" ", "-"); // Boşlukları tire ile değiştir
+            title = System.Text.RegularExpressions.Regex.Replace(title, @"[^a-z0-9\s-]", ""); // Geçersiz karakterleri kaldır
+            title = System.Text.RegularExpressions.Regex.Replace(title, @"\s+", " ").Trim(); // Birden fazla boşluğu tek boşluğa indir ve kenar boşluklarını kaldır
+            title = System.Text.RegularExpressions.Regex.Replace(title, @"\s", "-"); // Boşlukları tire ile değiştir
+
+            return title;
         }
     }
 }
