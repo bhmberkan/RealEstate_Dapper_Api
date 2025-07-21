@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+
+
+
+
+<section class="w3l-index3" id="about">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="row">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-5 pr-lg-0">
+                        <img src="~/starter/assets/images/about.jpg" alt="" class="img-fluid radius-image fill-image" />
+                    </div>
+                    <div class="col-lg-6 pl-lg-0" style="max-height: 400px; overflow-y: auto;">
+                        <div class="w3l-right-info">
+                            <h6 class="title-small">About us</h6>
+                            <h3 class="title-big">Our long-standing experience</h3>
+                            <h5 class="mt-4">
+                                We have over 15 year experience, Over 20,000 people work for us in more than 70
+                                countries all over the world.
+                                Lorem ipsum viverra feugiat dolor sit amet.
+                            </h5>
+                            <p class="mt-4">
+                                Viverra feugiat. Pellen tesque libero ut justo,
+                                ultrices in ligula. Semper at tempufddfel lorem ipsum. Lorem ipsum viverra feugiat dolor sit
+                                amet primis in faucibus orci.
+                            </p>
+                            <a href="#small-dialog1" class="popup-with-zoom-anim play-view d-block mt-md-5 mt-4">
+                                <span class="video-play-icon">
+                                    <span class="fa fa-play"></span>
+                                </span>
+                                See Our Story
+                            </a>
+                            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                            <div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
+                                <iframe src="https://www.youtube.com/embed/jqP3m3ElcxA" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="grids-area-hny main-cont-wthree-fea row mt-5 pt-lg-5 pt-5">
+                        @await Component.InvokeAsync("_DefaultBottomGridComponentPartial")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w3l-aboutblock2" id="why">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="row">
+                <div class="col-lg-6 left-wthree-img">
+                    <img src="~/starter/assets/images/about.jpg" alt="" class="img-fluid radius-image" />
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5 align-self">
+                    <h6 class="title-small">Why us</h6>
+                    <h3 class="title-big">To help members become more profitable and successful</h3>
+                    <p class="mt-4">
+                        We have over 15 year experience in business consulting arena. Learn more about our work!
+                        Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel
+                    </p>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="w3l-agentsblock py-5" id="team">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <h6 class="title-small text-center">Our team</h6>
+        <h3 class="title-big text-center mb-lg-5 mb-4">Meet our Agents</h3>
+        <!-- block -->
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 column-item">
+                <div class="users_box">
+                    <div class="user-avatar">
+                        <a href="#agent-single" class="avatar">
+                            <img src="~/starter/assets/images/team1.jpg" alt="" class="img-fluid w-100 radius-image">
+                        </a>
+                    </div>
+                    <div class="users_box_info">
+                        <p class="user_position">Selling Agent</p>
+                        <h4 class="user_title agent">
+                            <a href="#agent-single">Laura Antiochus</a>
+                        </h4>
+                        <div class="user_meta user_phone">
+                            <span class="phone-detail"> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></span>
+                        </div>
+                        <a href="#agent-single" class="btn btn-outline-primary btn-style mt-4">
+                            View Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 column-item mt-sm-0 mt-5">
+                <div class="users_box">
+                    <div class="user-avatar">
+                        <a href="#agent-single" class="avatar">
+                            <img src="~/starter/assets/images/team2.jpg" alt="" class="img-fluid w-100 radius-image">
+                        </a>
+                    </div>
+                    <div class="users_box_info">
+                        <p class="user_position">Selling Agent</p>
+                        <h4 class="user_title agent">
+                            <a href="#agent-single">Laura Antiochus</a>
+                        </h4>
+                        <div class="user_meta user_phone">
+                            <span class="phone-detail"> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></span>
+                        </div>
+
+                        <a href="#agent-single" class="btn btn-outline-primary btn-style mt-4">
+                            View Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 column-item mt-lg-0 mt-5">
+                <div class="users_box">
+                    <div class="user-avatar">
+                        <a href="#agent-single" class="avatar">
+                            <img src="~/starter/assets/images/team3.jpg" alt="" class="img-fluid w-100 radius-image">
+                        </a>
+                    </div>
+                    <div class="users_box_info">
+                        <p class="user_position">Selling Agent</p>
+                        <h4 class="user_title agent">
+                            <a href="#agent-single">Laura Antiochus</a>
+                        </h4>
+                        <div class="user_meta user_phone">
+                            <span class="phone-detail"> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></span>
+                        </div>
+                        <a href="#agent-single" class="btn btn-outline-primary btn-style mt-4">
+                            View Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 column-item mt-lg-0 mt-5">
+                <div class="users_box">
+                    <div class="user-avatar">
+                        <a href="#agent-single" class="avatar">
+                            <img src="~/starter/assets/images/team4.jpg" alt="" class="img-fluid w-100 radius-image">
+                        </a>
+                    </div>
+                    <div class="users_box_info">
+                        <p class="user_position">Selling Agent</p>
+                        <h4 class="user_title agent">
+                            <a href="#agent-single">Laura Antiochus</a>
+                        </h4>
+                        <div class="user_meta user_phone">
+                            <span class="phone-detail"> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></span>
+                        </div>
+
+                        <a href="#agent-single" class="btn btn-outline-primary btn-style mt-4">
+                            View Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
