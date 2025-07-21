@@ -1,19 +1,26 @@
 ﻿@model List<ResultProductDto>
 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+
+
 <div class="w3l-news" id="news">
     <section id="grids5-block" class="py-5">
         <div class="container py-lg-5 py-md-4 py-2">
-            <h3 class="title-big text-center">Günün 3 Fırsatı</h3>
+            <h3 class="title-big text-center">Son 10 İlanımız </h3>
             <div class="row mt-lg-5 mt-4 pt-3">
-                @foreach (var item in Model.OrderByDescending(x=>x.productId).Take(3))
+                @foreach (var item in Model.OrderByDescending(x => x.productId).Take(10))
                 {
-                    <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-4">
+                    <div class="col-lg-4 col-md-6 mb-5">
                         <div class="grids5-info">
                             <span class="posted-date">
                                 <a href="#blog-single">
-                                  
-                               
-                                
+
+
+
                                     <span class="small">@item.AdvertisementDate.ToString("yyyy")</span>
                                     <span class="big">@item.AdvertisementDate.ToString("dd")</span>
                                     <span class="small">@item.AdvertisementDate.ToString("MMMM")</span>
@@ -36,8 +43,9 @@
                             </div>
                         </div>
                     </div>
+                    <br/>
                 }
-              
+
 
 
             </div>
