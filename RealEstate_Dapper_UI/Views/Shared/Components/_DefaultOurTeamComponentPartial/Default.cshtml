@@ -1,0 +1,37 @@
+﻿@model List<ResultEmployeeDto>
+
+<div class="w3l-agentsblock py-5" id="team">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <h6 class="title-small text-center">Takımımız</h6>
+        <h3 class="title-big text-center mb-lg-5 mb-4">Temsilcilerimizle Tanışın</h3>
+        <!-- block -->
+        <div class="row">
+        @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-sm-6 column-item mt-sm-0 mt-5">
+                    <div class="users_box">
+                        <div class="user-avatar">
+                            <a href="#agent-single" class="avatar">
+                                <img src="@item.ImageUrl" alt="" class="img-fluid w-100 radius-image" style="width:300px; height:250px;">
+                            </a>
+                        </div>
+                        <div class="users_box_info">
+                            <p class="user_position">@item.Name</p>
+                            <h4 class="user_title agent">
+                                <a href="#agent-single">@item.Title</a>
+                            </h4>
+                            <span>@item.Mail</span>
+                            <div class="user_meta user_phone">
+                                <span class="phone-detail"> <a href="tel:+90-505-505-55-55">@item.PhoneNumber</a></span>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                </div>
+            }
+           
+          
+        </div>
+    </div>
+</div>
