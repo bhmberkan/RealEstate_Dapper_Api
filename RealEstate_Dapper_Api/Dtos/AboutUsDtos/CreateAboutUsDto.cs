@@ -1,0 +1,14 @@
+﻿namespace RealEstate_Dapper_Api.Dtos.AboutUsDtos
+{
+    public class CreateAboutUsDto
+    {
+      
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string Description1 { get; set; }
+        public string Description2 { get; set; }
+        public string Image { get; set; }
+        public string VideoTitle { get; set; }
+        public string VideoUrl { get; set; }
+    }
+}

@@ -1,0 +1,42 @@
+﻿ @model List<ResultAboutUsDto> 
+
+
+     @foreach (var item in Model)
+{
+    <section class="w3l-index3" id="about">
+        <div class="midd-w3 py-5">
+            <div class="container py-lg-5 py-md-4 py-2">
+                <div class="row">
+                    <div class="row d-flex align-items-stretch">
+                        <div class="col-lg-5 pr-lg-0">
+                            <img src="@item.Image" alt="" class="img-fluid radius-image fill-image" style="height:400px;"/>
+                        </div>
+                        <div class="col-lg-6 pl-lg-0" style="max-height: 400px; overflow-y: auto;">
+                            <div class="w3l-right-info">
+                                <h6 class="title-small">@item.Title</h6>
+                                <h3 class="title-big">@item.SubTitle</h3>
+                                <h5 class="mt-4">
+                                    @item.Description1
+                                </h5>
+                                <p class="mt-4">
+                                    @item.Description2
+                                </p>
+                                <a href="#small-dialog1" class="popup-with-zoom-anim play-view d-block mt-md-5 mt-4">
+                                    <span class="video-play-icon">
+                                        <span class="fa fa-play"></span>
+                                    </span>
+                                    @item.VideoTitle
+                                </a>
+                                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                <div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
+                                    <iframe src="@item.VideoUrl" frameborder="0" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
