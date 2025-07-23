@@ -18,6 +18,7 @@ using RealEstate_Dapper_Api.Repositories.SubFeatureRepository;
 using RealEstate_Dapper_Api.Repositories.TestimonialRepository;
 using RealEstate_Dapper_Api.Repositories.ToDoLitRepository;
 using RealEstate_Dapper_Api.Repositories.WhoWeAreRepository;
+using RealEstate_Dapper_Api.Repositories.WriteUsInformationRepository;
 
 namespace RealEstate_Dapper_Api.Containers
 {
@@ -45,6 +46,8 @@ namespace RealEstate_Dapper_Api.Containers
             services.AddTransient<IPropertyAmenityRepository, PropertyAmenityRepository>();
             services.AddTransient<ISubFeatureRepository, SubFeatureRepository>();
             services.AddTransient<IAboutUsRepository, AboutUsRepository>();
+            services.AddTransient<IWriteUsInformationRepository, WriteUsInformationRepository>();
+          
 
         }
     }

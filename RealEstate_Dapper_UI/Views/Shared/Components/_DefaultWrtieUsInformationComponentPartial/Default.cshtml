@@ -1,0 +1,42 @@
+﻿@model List<ResultWriteUsInformationDto>
+
+
+    @foreach (var item in Model)
+{
+
+    <div class="col-lg-4 cont-details">
+        <address>
+            <h5 class="">Ofis Adresi</h5>
+            <p>
+                <span class="fa fa-map-marker"></span>@item.Address
+            </p>
+            <h5 class="mt-4 pt-lg-3"> İletişim Bilgilerimiz</h5>
+            <p>
+                <span class="fa fa-mobile"></span> <strong>Telefon :</strong>
+                <a href="tel:@item.Tel1"> @item.Tel1</a>
+            </p>
+
+            <p>
+                <span class="fa fa-phone"></span> <strong>Tel :</strong>
+                <a href="tel:@item.Tel2"> @item.Tel2</a>
+            </p>
+
+            <p>
+                <span class="fa fa-envelope"></span> <strong>Email :</strong>
+                <a href="mailto:@item.Email"> @item.Email</a>
+            </p>
+        </address>
+    </div>
+
+    <div class="container-fluid px-0">
+        <div class="map mt-5">
+            <div class="ratio ratio-16x9">
+                <iframe src="@item.AddressUrl"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+}
