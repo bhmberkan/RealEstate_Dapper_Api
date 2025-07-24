@@ -1,0 +1,72 @@
+﻿@model UpdateAppUserDto
+@{
+    ViewData["Title"] = "UpdateAppUser";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Yeni Kullanıcı Ekleme Sayfası</h6>
+
+                <form method="post">
+
+                    <input type="hidden" asp-for="UserId">
+
+                    <label>Kullanıcı adı </label>
+                    <br />
+                    <input type="text" asp-for="UserName" class="form-control">
+                    <br />
+
+                    <label>Şifre </label>
+                    <br />
+                    <input type="password" asp-for="Password" class="form-control">
+                    <br />
+
+                    <label>Personel adı </label>
+                    <br />
+                    <input type="text" asp-for="Name" class="form-control">
+                    <br />
+
+                    <label>Telefon</label>
+                    <br />
+                    <input type="text" asp-for="PhoneNumber" class="form-control">
+                    <br />
+
+                    <label>Email </label>
+                    <br />
+                    <input type="email" asp-for="Email" class="form-control">
+                    <br />
+                 @*    <span class="input-group-btn">
+                        <select class="btn btn-default" name="propertyCategoryId" required>
+                            <option selected="">Rol</option>
+                          
+                            
+                                <option value="@Model.">@Model.UserRole</option>
+                            
+                        </select>
+                    </span> *@
+
+                    <label>Rol </label>
+                    <br />
+                    <input type="email" asp-for="UserRole" class="form-control">
+                    <br />
+
+
+                    <label>Foto(URL) </label>
+                    <br />
+                    <input type="tel" asp-for="UserImageUrl" class="form-control">
+                    <br />
+
+                    <button class="btn btn-primary">Kullanıcıyı Güncelle</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
