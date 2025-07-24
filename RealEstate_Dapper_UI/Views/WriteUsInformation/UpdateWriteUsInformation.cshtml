@@ -1,0 +1,53 @@
+﻿@model UpdateWriteUsInformationDto
+@{
+    ViewData["Title"] = "UpdateWriteUsInformation";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Yeni Kullanıcı Ekleme Sayfası</h6>
+
+                <form method="post">
+
+                    <input type="hidden" asp-for="WriteUsInformationId">
+
+                    <label>Tel 1 </label>
+                    <br />
+                    <input type="text" asp-for="Tel1" class="form-control">
+                    <br />
+
+                    <label>Tel 2</label>
+                    <br />
+                    <input type="text" asp-for="Tel2" class="form-control">
+                    <br />
+
+                    <label>Email </label>
+                    <br />
+                    <input type="email" asp-for="Email" class="form-control">
+                    <br />
+
+                    <label>Adress</label>
+                    <br />
+                    <textarea asp-for="Address" rows="5" class="form-control"> </textarea>
+                    <br />
+
+                    <label>Adres (Url) </label>
+                    <br />
+                    <input type="text" asp-for="AddressUrl" class="form-control">
+                    <br />
+                 
+               
+
+                    <button class="btn btn-primary">Güncelle</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+

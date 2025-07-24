@@ -1,0 +1,49 @@
+﻿@model ResultContactDto
+@{
+    ViewData["Title"] = "DetailMail";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="bg-white rounded shadow-sm p-4 border">
+                <h4 class="mb-4 text-primary">📩 Mail Detayları</h4>
+
+                <input type="hidden" asp-for="ContactID" />
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">İsim</label>
+                    <input type="text" asp-for="Name" class="form-control bg-light border-0" readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Mail</label>
+                    <input type="text" asp-for="Email" class="form-control bg-light border-0" readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Telefon</label>
+                    <input type="text" asp-for="Phone" class="form-control bg-light border-0" readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Başlık</label>
+                    <input type="text" asp-for="Subject" class="form-control bg-light border-0" readonly />
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Mesaj</label>
+                    <textarea asp-for="Message" rows="6" class="form-control bg-light border-0" readonly></textarea>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <a href="/Mail/DeleteMail/@Model.ContactID" class="btn btn-danger">
+                        <i class="bi bi-trash-fill me-1"></i> Sil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
