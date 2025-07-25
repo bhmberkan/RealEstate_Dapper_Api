@@ -42,6 +42,37 @@ RealEstate_Dapper_Api/
 
 ---
 
+
+
+## 🧪 UI Özellikleri
+
+- Kullanıcı Girişi / Yetkilendirme
+- Admin Paneli (Kullanıcı / İlan / İletişim yönetimi)
+- Dinamik Sayfalar: Anasayfa, Hakkımızda, İletişim, İlanlar
+- API ile iletişim: HttpClient kullanımı
+- Görsel yükleme, dropdown listeler, sayfalama (X.PagedList)
+- Gerçek zamanlı bildirimler (SignalR)
+
+---
+
+## 📸 **Proje Görselleri**
+---
+Görseller bu alanda yer alacaktır. Eklicem
+
+---
+
+## 🎯 Geliştirme Aşamaları
+
+- [x] Dapper ile veri işlemleri
+- [x] Swagger entegrasyonu
+- [x] DTO mapping yapısı
+- [x] UI → API veri bağlantısı
+- [x] SignalR bildirim sistemi
+- [x] Kullanıcı rolleri ve oturum yönetimi
+- [ ] JWT 
+
+---
+
 ## ⚙️ Kurulum Talimatları
 
 ### 1. Reponun Klonlanması
@@ -96,34 +127,7 @@ https://localhost:5001/swagger
 
 ---
 
-## 🧪 UI Özellikleri
 
-- Kullanıcı Girişi / Yetkilendirme
-- Admin Paneli (Kullanıcı / İlan / İletişim yönetimi)
-- Dinamik Sayfalar: Anasayfa, Hakkımızda, İletişim, İlanlar
-- API ile iletişim: HttpClient kullanımı
-- Görsel yükleme, dropdown listeler, sayfalama (X.PagedList)
-- Gerçek zamanlı bildirimler (SignalR)
-
----
-
-## 📸 **Proje Görselleri**
----
-Görseller bu alanda yer alacaktır. Eklicem
-
----
-
-## 🎯 Geliştirme Aşamaları
-
-- [x] Dapper ile veri işlemleri
-- [x] Swagger entegrasyonu
-- [x] DTO mapping yapısı
-- [x] UI → API veri bağlantısı
-- [x] SignalR bildirim sistemi
-- [x] Kullanıcı rolleri ve oturum yönetimi
-- [ ] JWT 
-
----
 
 ## 👨‍💻 Geliştirici Bilgisi
 
