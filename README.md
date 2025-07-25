@@ -69,8 +69,8 @@ Görseller bu alanda yer alacaktır. Eklicem
 - [x] UI → API veri bağlantısı
 - [x] SignalR bildirim sistemi
 - [x] Kullanıcı rolleri ve oturum yönetimi
-- [ ] JWT 
-
+- [x] JWT 
+- [x] Pagging
 ---
 
 ## ⚙️ Kurulum Talimatları
