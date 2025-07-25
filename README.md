@@ -118,7 +118,16 @@ RealEstate_Dapper_Api/
 <br/>
 <img width="333" height="318" alt="image" src="https://github.com/user-attachments/assets/273f74ab-0cbd-4291-a710-40d5d2dee12d" />
 <br/>
-<img width="2518" height="16384" alt="localhost_44358_swagger_index html" src="https://github.com/user-attachments/assets/0e69b25a-de9b-4da6-93ca-e136d3604a4b" />
+<img width="1488" height="877" alt="image" src="https://github.com/user-attachments/assets/4e7de6a2-2862-4379-aea1-30dc328b013b" />
+<br/>
+<img width="1549" height="899" alt="image" src="https://github.com/user-attachments/assets/b4a8f6b5-0dd0-4ff9-8581-f0aba94edb6f" />
+<br/>
+<img width="1582" height="786" alt="image" src="https://github.com/user-attachments/assets/e73e67bb-8698-4ec8-9dbf-c5f2f4f76a9b" />
+<br/>
+<img width="1581" height="705" alt="image" src="https://github.com/user-attachments/assets/e87b9278-9655-4ddf-98c2-acec51c98dc5" />
+<br/>
+<img width="1571" height="864" alt="image" src="https://github.com/user-attachments/assets/ccb203a5-1aed-477f-8003-c5409abe7b0a" />
+
 <br/>
 <img width="1333" height="796" alt="image" src="https://github.com/user-attachments/assets/7ae5c667-9db8-4882-85e8-cbb138cd6d91" />
 <br/>
