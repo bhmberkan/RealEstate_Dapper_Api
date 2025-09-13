@@ -27,6 +27,9 @@ RealEstate_Dapper_Api/
     ├── Dtos/                    # API'den gelen verilerin tutulduğu sınıflar
     ├── wwwroot/                 # Statik dosyalar (CSS, JS, görseller)
     └── Program.cs / Startup.cs # Arayüz konfigürasyonu
+
+## 📁 Proje Yapısı
+
 ```
 
 ---
@@ -198,7 +201,7 @@ https://localhost:5001/swagger
 ## 👨‍💻 Geliştirici Bilgisi
 
 - **👤 Adı**: Berkan Burak Turgut  
-- 💼 **LinkedIn**: [linkedin.com/in/berkanburakturgut](https://linkedin.com/in/berkanburakturgut)  
+- 💼 **LinkedIn**: [linkedin.com/in/berkanburakturgut](https://www.linkedin.com/in/berkan-turgut-2a277a232/)  
 - 💻 **GitHub**: [github.com/bhmberkan](https://github.com/bhmberkan)  
 - 📧 **E-posta**: berkanburakturgut@gmail.com  
 
